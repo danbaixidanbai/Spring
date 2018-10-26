@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- beans就是配置bean的实体类映射 -->
+<beans>
+	<bean id="userDao" className="com.dao.impl.UserDaoImpl"></bean>
+	<bean id="userService" className="com.service.impl.UserServiceImpl">
+		<!-- 向userservice中的userDao属性注入实例 -->
+		<property name="userDao" beanId="userDao"></property>
+	</bean>
+</beans>
